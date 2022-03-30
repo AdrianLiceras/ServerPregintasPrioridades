@@ -21,7 +21,7 @@ class PreguntasController(private val userRepository: UserRepository, private va
 
 
 
-        return preg
+        return user.toString()
 
     }
 

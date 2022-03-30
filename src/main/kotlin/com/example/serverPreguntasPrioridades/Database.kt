@@ -17,10 +17,10 @@ class Database {
 
             val listaValoresRespuesta = listOf(
 
-                ValoresRespuesta(listaIdentificador[0].id,"IntelliJ",1),
-                ValoresRespuesta(listaIdentificador[0].id,"Eclipse",2),
-                ValoresRespuesta(listaIdentificador[0].id,"BlueJ",3),
-                ValoresRespuesta(listaIdentificador[0].id,"AndroidStudio",4)
+                ValoresRespuesta(1,"IntelliJ",1),
+                ValoresRespuesta(1,"Eclipse",2),
+                ValoresRespuesta(1,"BlueJ",3),
+                ValoresRespuesta(1,"AndroidStudio",4)
 
             )
             listaValoresRespuesta.forEach{
@@ -33,7 +33,7 @@ class Database {
                 listaValoresRespuesta.forEach { valorRespuesta->
 
                     if (identificador.id==valorRespuesta.idPreg)
-                        listaDePreguntas.add(Preguntas(identificador,listaValoresRespuesta))
+                        listaDePreguntas.add(Preguntas(identificador.id,identificador.pregunta,listaValoresRespuesta))
 
                 }
 

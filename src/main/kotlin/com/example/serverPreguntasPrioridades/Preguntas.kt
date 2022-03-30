@@ -6,7 +6,7 @@ import javax.persistence.Entity
 import javax.persistence.Id
 
 @Entity
-class Preguntas(@Id var id:Identififador, @ElementCollection var listaOpciones: List<ValoresRespuesta> ) {
+class Preguntas(@Id var id:Int , var pregunta:String, @ElementCollection var listaOpciones: List<ValoresRespuesta> ) {
 
 
 
