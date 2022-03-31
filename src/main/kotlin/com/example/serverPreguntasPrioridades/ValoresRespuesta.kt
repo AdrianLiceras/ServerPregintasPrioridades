@@ -1,10 +1,13 @@
 package com.example.serverPreguntasPrioridades
 
 import com.google.gson.Gson
+import javax.persistence.Embeddable
 import javax.persistence.Entity
+import javax.persistence.GeneratedValue
 import javax.persistence.Id
-@Entity
-data class ValoresRespuesta(var idPreg:Int, @Id var opcion:String , var valor:Int) {
+@Embeddable
+data class ValoresRespuesta(var idPreg:Int,  var opcion:String , var valor:Int) {
+
 
     override fun toString(): String {
         val gson = Gson()

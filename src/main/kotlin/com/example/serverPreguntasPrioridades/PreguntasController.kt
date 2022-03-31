@@ -19,7 +19,9 @@ class PreguntasController(private val userRepository: UserRepository, private va
         }
         userRepository.save(user)
 
-
+        userRepository.findAll().forEach {
+            println(it)
+        }
 
         return user.toString()
 
