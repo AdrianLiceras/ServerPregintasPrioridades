@@ -13,7 +13,7 @@ class PreguntasController(private val userRepository: UserRepository, private va
     fun obtenerUsuario(@PathVariable id:Int):String{
 
         val user=User(id)
-        var preg=""
+
         preguntasRepository.findAll().forEach {
             user.listaDePreguntas.add(it)
         }
@@ -25,6 +25,17 @@ class PreguntasController(private val userRepository: UserRepository, private va
 
         return user.toString()
 
+    }
+
+    @GetMapping("enviarRespuesta/{respuesta}")
+    fun enviarRes(@PathVariable respuesta:String):String{
+
+            print(respuesta)
+
+
+
+
+        return "Respuesta enviadas"
     }
 
 }
